@@ -1,3 +1,9 @@
+---
+layout: page
+title: "About Met"
+permalink: /about/
+---
+
 # About Me
 
 First and foremost, I am a person,
