@@ -4,3 +4,4 @@ Welcome to my personal page of personal projects, notes and thoughts. I might wr
 
 You can explore the following links:
 - [About Me](/about/)
+- [Packet Analysis](/packet_analysis/)
