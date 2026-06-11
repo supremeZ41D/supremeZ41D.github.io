@@ -21,3 +21,4 @@ People have attacked it, as well as those who hold it in the highest regard. Reg
 It is my personal opinion that if there ever were a book that everyone should read—if you only have space for one single book on your shelf—the Bible should be that book.
 
 The following links will show some of my notes:
+[Romans](/romans/)
