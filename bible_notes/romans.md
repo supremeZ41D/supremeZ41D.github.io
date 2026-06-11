@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Romans"
-permalink: /romans/
+permalink: /bible_notes/romans/
 ---
 
 # Romans 1
