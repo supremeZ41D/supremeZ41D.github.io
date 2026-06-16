@@ -6,7 +6,8 @@ permalink: /bible_notes/romans/
 
 # Romans 1
 
-- Paul wastes no time greeting the Romans, in which he declares Jesus Christ is the Lord, that he rose up from death and that he is a descendent from King David.
+- Paul wastes no time greeting the Romans, in which he declares the following from Jesus Christ (Rom 1: 3-6):
+  - God's Son was promised by the prophets.
 
 - When people believe in God, they will be justified, and blessed.
 
