@@ -39,6 +39,6 @@ When performing a _dig_ request on those domains, and subsequently on the _opsko
 
 For more context about those domains (please refer to https://docs.netskope.com):
 - **_events.goskope.com_** — It collects telemetry/event data for monitoring user experience.
-- **_addon-<tenantname>.goskope.com_** — _Configuration download_ for the Netskope Client (Management Plane). It downloads the user's config files and also _auto-detects local explicit proxies_ to enable interoperate mode.
+- **addon-<tenantname>.goskope.com** — _Configuration download_ for the Netskope Client (Management Plane). It downloads the user's config files and also _auto-detects local explicit proxies_ to enable interoperate mode.
 - **_gateway.gslb.goskope.com_** — _GSLB (Global Server Load Balancing) API endpoint_. The Netskope Client calls this to perform latency-based Data Plane selection — it returns the list of nearby data centers so the client connects to the optimal DP POP.
-- **_achecker-<tenantname>.goskope.com_** — _Client enforcement_ (Management Plane). It checks for the presence of other Netskope steering methods (GRE/IPSec) and maintains an HTTP longpoll connection for _Client notifications/popups_. If the Client isn't installed, users hitting a steered app get redirected to an install page via this domain.
+- **achecker-<tenantname>.goskope.com** — _Client enforcement_ (Management Plane). It checks for the presence of other Netskope steering methods (GRE/IPSec) and maintains an HTTP longpoll connection for _Client notifications/popups_. If the Client isn't installed, users hitting a steered app get redirected to an install page via this domain.
