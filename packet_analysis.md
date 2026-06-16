@@ -7,5 +7,5 @@ permalink: /packet_analysis/
 # Packet Analysis
 
 Here you will find a list of pages showcasing some notes on my own packet analysis findings:
-- [Netskope Traffic Analysis](/nsanalysis/)
+- [Netskope Traffic Analysis](/netskope/nsanalysis/)
 - 
