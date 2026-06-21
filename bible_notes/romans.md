@@ -27,3 +27,17 @@ permalink: /bible_notes/romans/
 
 
 # Romans 2
+
+- Nonetheless, even when people who know of the God of Israel, commit such things, those who judge them and commit the same acts of sins will also receive the same judgement from God **(Rom 2: 1-5)**.
+
+- Still in the context of people who know who the God of Israel is and what He stands for, God sees the works of man for judgement **(Rom 2: 6-11)**.
+
+- Jew (those under the Law) and Gentile (those not under the Law) have no excuse for their sinful behavior, meaning, even for those who never knew of the Law, they will also see God's judgement because of their sinful acts **(Rom 2: 12)**.
+
+- Now, for those who are not under the Law (Gentiles), who "_by nature do what the Law requires, they are a law to themselves..._". This means that for them, unknowingly, the law is written in their hearts **(Rom 2: 13-15)**.
+
+- Paul calls out the hipocresy of Jewish teachers of the Law, stating that they who rightfully teach it should also obey it **(Rom 2 :17-24)**.
+
+- Paul puts circumcision into perspective. According to him, circumcision has no value to a Jew that does not obey the Law, whereas for the uncircumcised, keeping, "_the precepts of the Law_" will be regarded as having circumcision. This means, no matter if the person is Jew or Gentile (circumcised or not), keeping the Law goes above race and culture **(Rom 2: 25-27)**.
+
+- To put emphasis on this last point, Paul writes the following in **Romans 2: 28-29**: "_For no one is a Jew who is merely one outwardly, nor is circumcision outward or physical. But a Jew is one inwardly, and circumcision is a matter of the heart, by the Spirit, not by the letter. His praise is not from man but from God._"
