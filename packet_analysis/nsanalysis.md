@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Netskope Traffic anaysis"
+title: "Netskope Traffic Analysis"
 permalink: /packet_analysis/nsanalysis/
 ---
 
