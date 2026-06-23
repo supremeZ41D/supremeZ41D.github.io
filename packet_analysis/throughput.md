@@ -27,9 +27,9 @@ permalink: /packet_analysis/throughput/
 ![4step Increase](cwnd_images/cwnd_4step_increase.png)
 - Going further in the TCPTrace and Stevens graphs, it seems the steps get reduced from 4, to 3, to 2. This means the sender is trying to speed-up the data transfer, hopefully trying to bring it down to just a single burst per RTT.
 
-![4to3 Decrease](cwnd_4to3step_decrease.png)
+![4to3 Decrease](cwnd_images/cwnd_4to3step_decrease.png)
 
-![3to2 Decrease](cwnd_3to2step_decrease.png)
+![3to2 Decrease](cwnd_images/cwnd_3to2step_decrease.png)
 
 - **Conclusions**:
 	- The initial exponential slow-start appears.
