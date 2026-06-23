@@ -4,7 +4,7 @@ title: "Throughput Topics"
 permalink: /packet_analysis/throughput/
 ---
 
-## Congestion Window Sighting
+# Congestion Window Sighting
 
 - **Congestion Window** sighting in the Stevens graph on one of the 20.42.1.1 TCP streams, with both its slow-start.
 - In particular for the slow-start, the Sequence Numbers increase in single bulks of data, which will change after the first sighting of a Selective ACK.
