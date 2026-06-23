@@ -9,6 +9,8 @@ permalink: /packet_analysis/throughput/
 - **Congestion Window** sighting in the Stevens graph on one of the 20.42.1.1 TCP streams, with both its slow-start.
 - In particular for the slow-start, the Sequence Numbers increase in single bulks of data, which will change after the first sighting of a Selective ACK.
 
+![CWND_Sighting](cwnd_images/cwnd_sighting.png)
+
 ![[cwnd_sighting.png]]
 - Around the 2.25 second mark, as seen in the Stevens graph, some Selective Acks are seen. This can be verified when analyzing the TCPTrace graph for the same stream. After that, the Sequence Numbers increase in a two-step fashion.
 
