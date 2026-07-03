@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "fc5d422df1fb05dd",
+    "id": "f9f9ca6c24ca3c89",
     "type": "split",
     "children": [
       {
-        "id": "0eea04b0b3b0f7d2",
+        "id": "3d455eb33a65bc0a",
         "type": "tabs",
         "children": [
           {
-            "id": "2107770e4239e73e",
+            "id": "f5abf57568015d49",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nsanalysis.md",
+                "file": "packet_analysis/nsanalysis.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "c9eabd268ac3aacb",
+    "id": "7856a044219795cd",
     "type": "split",
     "children": [
       {
-        "id": "77ebdfebad66d58a",
+        "id": "2a98a877b6c1cf5a",
         "type": "tabs",
         "children": [
           {
-            "id": "08b5521583127cb2",
+            "id": "7df45ca0c2ae05bc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "95ffc5c374f0fb32",
+            "id": "8b067eb11a5a2550",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,17 +61,17 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Buscar"
+              "title": "Search"
             }
           },
           {
-            "id": "2a04182fdcb20100",
+            "id": "26f3dcaab81dfead",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Marcadores"
+              "title": "Bookmarks"
             }
           }
         ]
@@ -81,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "8f0e2dde037645f8",
+    "id": "810959c30332b8b2",
     "type": "split",
     "children": [
       {
-        "id": "b299a203618c510d",
+        "id": "b783729263282b1a",
         "type": "tabs",
         "children": [
           {
-            "id": "cd87ee4dd604bcae",
+            "id": "c0f75397ef2311e0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "nsanalysis.md",
+                "file": "packet_analysis/nsanalysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de nsanalysis"
+              "title": "Backlinks for nsanalysis"
             }
           },
           {
-            "id": "ede39d3c58123ceb",
+            "id": "d9af778010aabbb5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "nsanalysis.md",
+                "file": "packet_analysis/nsanalysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de nsanalysis"
+              "title": "Outgoing links from nsanalysis"
             }
           },
           {
-            "id": "fa3ae79bc85a44ef",
+            "id": "21e48a3c9c56dc21",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,11 +133,11 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Etiquetas"
+              "title": "Tags"
             }
           },
           {
-            "id": "fe55bb30476b279c",
+            "id": "ab93f16935cfae90",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -147,22 +147,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "Todas las propiedades"
+              "title": "All properties"
             }
           },
           {
-            "id": "b83a2bf375ce5541",
+            "id": "8ea0323856e03d21",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "nsanalysis.md",
+                "file": "packet_analysis/nsanalysis.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de nsanalysis"
+              "title": "Outline of nsanalysis"
             }
           }
         ]
@@ -183,21 +183,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "2107770e4239e73e",
-  "lastOpenFiles": [
-    "throughput.md",
-    "cwnd_images/cwnd_sighting.png",
-    "cwnd_images",
-    "cwnd_images/cwnd_4step_increase.png",
-    "cwnd_images/cnwd_2step_increase.png",
-    "cwnd_images/cwnd_3to2step_decrease.png",
-    "cwnd_images/cwnd_4to3step_decrease.png",
-    "Pasted image 20260619093119.png",
-    "cwnd_images/cwnd_3step_increase.png",
-    "cwnd_images/cwnd_linear_increase.png",
-    "Pasted image 20260602121608.png",
-    "Pasted image 20260526144741.png",
-    "nsanalysis.md",
-    "Untitled"
-  ]
+  "active": "f5abf57568015d49",
+  "lastOpenFiles": []
 }
