@@ -10,7 +10,14 @@ I will attempt to analyze my findings about all things Netskope, from a packet a
 
 # Agent Enabled - Packet Flow
 
-**Requisites**:
+## Motivation
+I had the curiosity of knowing how the Netskope agent works when enabled. There is a lot of publicly available documentation about the theory behind it, however, I wanted to find out some of that from a network-traffic perspective. 
+
+A particular scenario I wanted to explore was about what traffic the Netskope agent was involved with when its tunnel was up. Most of all, when a user was not navigating to the Internet, as in, the Netskope agent is not tunneling any browser-based web traffic to the Netskope cloud. This means, what is the Netskope agent doing when the computer is running and the user has not interacted with the computer what-so-ever?
+
+The following findings are centered around the Internet-based destinations the Netskope agent interacts with in this scenario.
+
+## Requisites:
 - The agent is already installed.
 - The agent is user enabled.
 - The user does not open any apps does not interact with anything in the computer.
@@ -56,6 +63,11 @@ For more context about those domains (please refer to https://docs.netskope.com)
 
 # Agent Disabled - Packet Flow
 This is an attempt to analyze how the Netskope agent behaves when disabled, when the computer has no other applications opened. I ran a Wireshark capture and the following findings are what was seen in it.
+
+## Motivation
+A mystery in my head has been about what the Netskope agent does when disabled, meaning, the tunnel, that should steer traffic, is down. Theory has it that its processes are still running, which is true, which steers me to think that the agent is still contacting the Netskope cloud for something.
+
+The following findings have to do with the destination the Netskope agent interacts with, at a basic level.
 
 ## Requisites
 - The agent is already installed.

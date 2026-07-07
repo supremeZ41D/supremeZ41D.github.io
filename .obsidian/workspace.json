@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "packet_analysis/nsanalysis.md",
+                "file": "bible_notes/romans.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nsanalysis"
+              "title": "romans"
             }
           }
         ]
@@ -184,5 +184,8 @@
     }
   },
   "active": "f5abf57568015d49",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "bible_notes.md",
+    "packet_analysis/nsanalysis.md"
+  ]
 }
