@@ -55,3 +55,14 @@ permalink: /bible_notes/romans/
 - Now, Paul goes right at the concept of justification through routines and works, stating the revelation and manifestation of God's righteousness through faith in Jesus Christ eliminates boasting, meaning, people cannot justify themselves by what people do, rather by faith. Paul also expands the concept of God is not isolated to just to the Jews, but to everyone else **(Rom 3: 27-30)**.
 
 - Finally, Paul answers the very important question: "Do we overthrow the law by faith?" No, we uphold it, as in, support it, defend it and maintain it **(Rom 3: 31)**.
+
+
+## Romans 4
+
+- "_Abraham believed God, and it was counted for righteousness._" Paul begins this chapter prioritizing faith over works, thus eliminating boasting before God **(Rom 4: 1-8)**.
+
+- Paul justifies faith over works by instructing that, before Abraham became a Hebrew (circumcised), he had faith in God. This implies that faith in the God of Abraham, Isaac and Jacob preceded any social or racial belonging, signaled by a bodily mark. Abrahams circumcision was a "_seal of the righteousness that he had by faith while he was still uncircumcised._" In this way, Abraham would become the father for both the circumcised and uncircumcised **(Rom 4: 9-12)**.
+
+- If those who follow the Law are heirs of God's promises, then faith is null, however, the Law reveals what transgressions really are **(Rom 4: 13-15)**.
+
+- Paul end this chapter stating that Abraham is the father of those who have faith in God: both of the circumcised as well as the uncircumcised. His unwavering and growing faith in God was counted to him as righteousness **(Rom 4: 16-25)**.
