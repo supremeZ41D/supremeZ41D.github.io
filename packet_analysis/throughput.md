@@ -10,21 +10,22 @@ This stream also follows a _Congestion Window_ pattern when a computer is downlo
 
 - **Slow Start**: As seen in the following graph, the "wait time" between traffic bursts gets shorter and shorter as time goes on, except for the wait time around the 1 second mark, which, according to the packet capture, was just a delay in the certificate server's response.
 
-![[cwnd_images/cert_slowstart.png]]
+![Cert CWND Slow Start](cwnd_images/cert_slowstart.png)
 
 
 - From the _Slow Start_, traffic continues its steep climb when transferring information, taking less time between traffic bursts from the server side:
 
-![[cwnd_images/certsteep_cwnd_1.png]]
+![Cert CWND Steep Increase](cwnd_images/certsteep_cwnd_1.png)
 
 - The climb gets steeper (the time between traffic bursts is reduced), until the exchange stops:
 
-![[cwnd_images/certsteep_cwnd_2.png]]
+![Cert CWND Steep Increase 2](cwnd_images/certsteep_cwnd_2.png)
 
 **Conclusions**:
 	- The initial exponential slow-start appears.
 	- The sender tries sending data in single bursts, increasing those bursts every RTT.
 	- As opposed to the earlier congestion window sighting, there are no SACK blocks, thus the transfer bursts get steeper and steeper until it ends.
+
 # Congestion Window Sighting
 
 - **Congestion Window** sighting in the Stevens graph on one of a particular IP's TCP streams, with both its slow-start.
