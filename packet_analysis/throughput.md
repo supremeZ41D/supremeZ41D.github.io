@@ -21,7 +21,7 @@ This stream also follows a _Congestion Window_ pattern when a computer is downlo
 
 ![Cert CWND Steep Increase 2](cwnd_images/certsteep_cwnd_2.png)
 
-**Conclusions**:
+- **Conclusions**:
 	- The initial exponential slow-start appears.
 	- The sender tries sending data in single bursts, increasing those bursts every RTT.
 	- As opposed to the earlier congestion window sighting, there are no SACK blocks, thus the transfer bursts get steeper and steeper until it ends.
