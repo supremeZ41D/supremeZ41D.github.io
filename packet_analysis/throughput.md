@@ -10,15 +10,16 @@ This stream also follows a _Congestion Window_ pattern when a computer is downlo
 
 - **Slow Start**: As seen in the following graph, the "wait time" between traffic bursts gets shorter and shorter as time goes on, except for the wait time around the 1 second mark, which, according to the packet capture, was just a delay in the certificate server's response.
 
-![[cwnd_images/cert_slowstart.png|436]]
+![[cwnd_images/cert_slowstart.png]]
+
 
 - From the _Slow Start_, traffic continues its steep climb when transferring information, taking less time between traffic bursts from the server side:
 
-![[cwnd_images/cert_steep_cwnd_1.png|398]]
+![[cwnd_images/certsteep_cwnd_1.png]]
 
 - The climb gets steeper (the time between traffic bursts is reduced), until the exchange stops:
 
-![[cwnd_images/cert_steep_cwnd_2.png|456]]
+![[cwnd_images/certsteep_cwnd_2.png]]
 
 **Conclusions**:
 	- The initial exponential slow-start appears.

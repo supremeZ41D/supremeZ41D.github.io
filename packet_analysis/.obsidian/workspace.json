@@ -13,24 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nsanalysis.md",
+                "file": "throughput.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nsanalysis"
+              "title": "throughput"
             }
           },
           {
             "id": "03a421f407e5a450",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "cwnd_images/cert_steep_cwnd_1.png"
+                "file": "throughput.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "cert_steep_cwnd_1"
+              "icon": "lucide-file",
+              "title": "throughput"
             }
           }
         ]
@@ -197,19 +199,19 @@
   },
   "active": "2107770e4239e73e",
   "lastOpenFiles": [
+    "cwnd_images/certsteep_cwnd_2.png",
     "throughput.md",
-    "cwnd_images/cert_steep_cwnd_2.png",
-    "cwnd_images/cert_steep_cwnd_1.png",
+    "cwnd_images/certsteep_cwnd_1.png",
+    "Pasted image 20260714103240.png",
     "cwnd_images/cert_slowstart.png",
-    "tcpfindings.md",
+    "cwnd_images/cert_steep_cwnd_1.png",
     "nsanalysis.md",
+    "cwnd_images/cert_steep_cwnd_2.png",
+    "tcpfindings.md",
     "Pasted image 20260602121608.png",
     "Pasted image 20260619093119.png",
     "agent_enabled_images/top10pop_irtt.png",
     "agent_enabled_images/tcpprobe2gslb.png",
-    "agent_enabled_images/tlsPOP.png",
-    "agent_enabled_images/tcp10probes_tls2gateway.png",
-    "agent_enabled_images/tls2gslb_top10probe.png",
     "agent_enabled_images",
     "tcpfindings",
     "cwnd_images"
