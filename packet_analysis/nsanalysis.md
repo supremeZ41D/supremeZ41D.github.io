@@ -7,6 +7,34 @@ permalink: /packet_analysis/nsanalysis/
 
 I will attempt to analyze my findings about all things Netskope, from a packet analysis perspective. These may consist in the analysis of traffic associated any Netskope product. The topics will be sorted from the most recent.
 
+# Netskope GSLB Probing
+
+## Motivation
+When the Netskope agent is enabled, theory has it (and publicly available documentation as well) that the Netskope agent will start sending probes to the top-10 closest Netskope PoPs. How is this seen from a packet perspective?
+
+The following small analysis was found in the same _Agent Enabled_ file.
+## Findings
+
+ 1. A TLS connection to _gateway.gslb.goskope.com_, which is followed by the start of the TCP-probing the top-10 closest POPs. This means the client was requesting those top-10 POPs and subsequently probing them:
+
+![[agent_enabled_images/tls2gslb_top10probe.png]]
+
+2. After probing those POPs there is another TLS connection to _gateway.gslb.goskope.com_.
+
+![[agent_enabled_images/tcp10probes_tls2gateway.png]]
+
+3. Sometimes, I do not see anything else after that, other than this pattern repeating itself. However, there are times when this last TLS connection to _gateway.gslb.goskope.com_ appears  after the client probes those POPs:
+
+![[agent_enabled_images/tlsPOP.png]]
+
+4. Occasionally, I am seeing a TCP probe to _gateway.gslb.goskope.com_:
+
+![[agent_enabled_images/tcpprobe2gslb.png]]
+
+5. On another note, when analyzing their _iRTTs_, it is evident that the client starts with the closest PoP (as in, the PoP with the lowest probable round-trip time).
+
+![[agent_enabled_images/top10pop_irtt.png]]
+
 
 # Agent Enabled - Packet Flow
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "bible_notes/romans.md",
+                "file": "packet_analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "romans"
+              "title": "packet_analysis"
             }
           }
         ]
@@ -185,7 +185,25 @@
   },
   "active": "f5abf57568015d49",
   "lastOpenFiles": [
+    "packet_analysis/cwnd_images/cert_steep_cwnd_2.png",
+    "packet_analysis/cert_steep_cwnd_2.png",
+    "packet_analysis/Pasted image 20260714101554.png",
+    "packet_analysis/cwnd_images/cert_steep_cwnd_1.png",
+    "packet_analysis/cert_steep_cwnd_1.png",
+    "packet_analysis/Pasted image 20260714101334.png",
+    "packet_analysis/cwnd_images/cert_slowstart.png",
+    "packet_analysis/cert_slowstart.png",
+    "packet_analysis/Pasted image 20260714101141.png",
+    "packet_analysis/agent_enabled_images/top10pop_irtt.png",
+    "packet_analysis/top10pop_irtt.png",
+    "packet_analysis/agent_enabled_images",
+    "packet_analysis/agent_enabed_images",
+    "packet_analysis/Untitled",
+    "packet_analysis/tcpfindings.md",
+    "packet_analysis/Untitled.md",
+    "packet_analysis/tcpfindings",
     "bible_notes.md",
+    "bible_notes/romans.md",
     "packet_analysis/nsanalysis.md"
   ]
 }

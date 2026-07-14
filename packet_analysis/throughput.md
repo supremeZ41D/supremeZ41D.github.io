@@ -4,9 +4,29 @@ title: "Throughput Topics"
 permalink: /packet_analysis/throughput/
 ---
 
+# Congestion Window Sighting 2
+
+This stream also follows a _Congestion Window_ pattern when a computer is downloading a particular certificate from the Internet.
+
+- **Slow Start**: As seen in the following graph, the "wait time" between traffic bursts gets shorter and shorter as time goes on, except for the wait time around the 1 second mark, which, according to the packet capture, was just a delay in the certificate server's response.
+
+![[cwnd_images/cert_slowstart.png|436]]
+
+- From the _Slow Start_, traffic continues its steep climb when transferring information, taking less time between traffic bursts from the server side:
+
+![[cwnd_images/cert_steep_cwnd_1.png|398]]
+
+- The climb gets steeper (the time between traffic bursts is reduced), until the exchange stops:
+
+![[cwnd_images/cert_steep_cwnd_2.png|456]]
+
+**Conclusions**:
+	- The initial exponential slow-start appears.
+	- The sender tries sending data in single bursts, increasing those bursts every RTT.
+	- As opposed to the earlier congestion window sighting, there are no SACK blocks, thus the transfer bursts get steeper and steeper until it ends.
 # Congestion Window Sighting
 
-- **Congestion Window** sighting in the Stevens graph on one of the 20.42.1.1 TCP streams, with both its slow-start.
+- **Congestion Window** sighting in the Stevens graph on one of a particular IP's TCP streams, with both its slow-start.
 - In particular for the slow-start, the Sequence Numbers increase in single bulks of data, which will change after the first sighting of a Selective ACK.
 
 ![CWND_Sighting](cwnd_images/cwnd_sighting.png)
