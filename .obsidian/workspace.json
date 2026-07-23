@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "packet_analysis/tcpanalysis.md",
+                "file": "bible_notes/obidiah.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tcpanalysis"
+              "title": "obidiah"
             }
           }
         ],
@@ -214,8 +214,10 @@
   },
   "active": "3e73481a77d1f8fb",
   "lastOpenFiles": [
-    "packet_analysis/nsanalysis.md",
+    "bible_notes/romans.md",
+    "bible_notes.md",
     "packet_analysis/tcpanalysis.md",
+    "packet_analysis/nsanalysis.md",
     "packet_analysis.md",
     "packet_analysis/tcp_images/privateca_crl.png",
     "packet_analysis/tcp_images/privateca_cacrt.png",
@@ -228,10 +230,8 @@
     "packet_analysis/tcp_images/privateca_3wayClient.png",
     "packet_analysis/tcp_images",
     "bible_notes/obidiah.md",
-    "bible_notes.md",
     "bible/obidiah.md",
     "bible",
-    "bible_notes/romans.md",
     "packet_analysis/throughput.md",
     "README.md",
     "about.md",
