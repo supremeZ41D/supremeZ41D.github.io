@@ -214,6 +214,8 @@
   },
   "active": "3e73481a77d1f8fb",
   "lastOpenFiles": [
+    "bible/obidiah.md",
+    "bible_notes/obidiah.md",
     "bible_notes/romans.md",
     "bible_notes.md",
     "packet_analysis/tcpanalysis.md",
@@ -229,8 +231,6 @@
     "packet_analysis/tcp_images/privateca_3wayServer.png",
     "packet_analysis/tcp_images/privateca_3wayClient.png",
     "packet_analysis/tcp_images",
-    "bible_notes/obidiah.md",
-    "bible/obidiah.md",
     "bible",
     "packet_analysis/throughput.md",
     "README.md",
