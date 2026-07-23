@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "packet_analysis.md",
+                "file": "bible_notes/romans.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "packet_analysis"
+              "title": "romans"
+            }
+          },
+          {
+            "id": "27db219b6d0126da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "packet_analysis/nsanalysis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "nsanalysis"
+            }
+          },
+          {
+            "id": "3e73481a77d1f8fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "packet_analysis/tcpanalysis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tcpanalysis"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -183,27 +212,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "f5abf57568015d49",
+  "active": "3e73481a77d1f8fb",
   "lastOpenFiles": [
+    "packet_analysis/tcp_images/privateca_crl.png",
+    "packet_analysis/tcpanalysis.md",
+    "packet_analysis/tcp_images/privateca_cacrt.png",
+    "packet_analysis/nsanalysis.md",
+    "packet_analysis/tcp_images/privateca_stream_end.png",
+    "packet_analysis/tcp_images/privateca_get_crl.png",
+    "packet_analysis/tcp_images/privateca_get_cacert.png",
+    "packet_analysis/tcp_images/privateca_crl_download.png",
+    "packet_analysis/tcp_images/privateca_cacrt_download.png",
+    "packet_analysis/tcp_images/privateca_3wayServer.png",
+    "packet_analysis/tcp_images/privateca_3wayClient.png",
+    "packet_analysis/tcp_images",
+    "bible_notes/obidiah.md",
+    "bible_notes.md",
+    "bible/obidiah.md",
+    "bible",
+    "bible_notes/romans.md",
+    "packet_analysis/throughput.md",
+    "packet_analysis.md",
+    "README.md",
+    "about.md",
     "packet_analysis/cwnd_images/certsteep_cwnd_2.png",
-    "packet_analysis/certsteep_cwnd_2.png",
-    "packet_analysis/Pasted image 20260714103634.png",
-    "packet_analysis/cwnd_images/certsteep_cwnd_1.png",
-    "packet_analysis/certsteep_cwnd_1.png",
-    "packet_analysis/Pasted image 20260714103416.png",
-    "packet_analysis/Pasted image 20260714103240.png",
-    "packet_analysis/cwnd_images/cert_slowstart.png",
-    "packet_analysis/cert_slowstart.png",
-    "packet_analysis/Pasted image 20260714102920.png",
-    "packet_analysis/cwnd_images/cert_steep_cwnd_2.png",
     "packet_analysis/agent_enabled_images",
     "packet_analysis/agent_enabed_images",
-    "packet_analysis/Untitled",
     "packet_analysis/tcpfindings.md",
     "packet_analysis/Untitled.md",
-    "packet_analysis/tcpfindings",
-    "bible_notes.md",
-    "bible_notes/romans.md",
-    "packet_analysis/nsanalysis.md"
+    "packet_analysis/tcpfindings"
   ]
 }

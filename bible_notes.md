@@ -22,3 +22,4 @@ It is my personal opinion that if there ever were a book that everyone should re
 
 The following links will show some of my notes:
 - [Romans](/bible_notes/romans/)
+- [Obidiah](/bible/obidiah)
