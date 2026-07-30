@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "romans.md",
+                "file": "obidiah.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "romans"
+              "title": "obidiah"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "4782f77e73104d33",
   "lastOpenFiles": [
-    "romans.md"
+    "romans.md",
+    "obidiah.md"
   ]
 }
