@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "bible_notes.md",
+                "file": "bible_notes/obidiah.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bible_notes"
+              "title": "obidiah"
             }
           }
         ],
@@ -214,12 +214,15 @@
   },
   "active": "3e73481a77d1f8fb",
   "lastOpenFiles": [
+    "README.md",
+    "about.md",
+    "packet_analysis/nsanalysis.md",
+    "packet_analysis/tcpanalysis.md",
+    "packet_analysis/throughput.md",
+    "bible_notes.md",
     "bible_notes/obidiah.md",
     "bible/obidiah.md",
     "bible_notes/romans.md",
-    "bible_notes.md",
-    "packet_analysis/tcpanalysis.md",
-    "packet_analysis/nsanalysis.md",
     "packet_analysis.md",
     "packet_analysis/tcp_images/privateca_crl.png",
     "packet_analysis/tcp_images/privateca_cacrt.png",
@@ -232,9 +235,6 @@
     "packet_analysis/tcp_images/privateca_3wayClient.png",
     "packet_analysis/tcp_images",
     "bible",
-    "packet_analysis/throughput.md",
-    "README.md",
-    "about.md",
     "packet_analysis/cwnd_images/certsteep_cwnd_2.png",
     "packet_analysis/agent_enabled_images",
     "packet_analysis/agent_enabed_images",
