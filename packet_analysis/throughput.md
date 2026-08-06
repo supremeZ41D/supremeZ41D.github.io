@@ -45,6 +45,7 @@ This stream's data flow consists of a simple HTTP GET request to a Microsoft CDN
 | Prev. Seg. not Captured | 3       |
 | Window Update           | 39      |
 | Out-of-Order            | 33      |
+
 - **Window Full**:
 	- From the start of the TCP stream, despite the client advertising a window of 65535 bytes (with possibly increasing it 256 times more), the HTTP GET's packet advertises just a Calculated Window Size of 2816 bytes.
 	- The server then sends `1408 + 1408 bytes = 2816 bytes` worth bytes of data (not even the server's own MSS), effectively triggering a Wireshark `TCP Windows Full` alert.
