@@ -66,3 +66,7 @@ permalink: /bible_notes/romans/
 - If those who follow the Law are heirs of God's promises, then faith is null, however, the Law reveals what transgressions really are **(Rom 4: 13-15)**.
 
 - Paul end this chapter stating that Abraham is the father of those who have faith in God: both of the circumcised as well as the uncircumcised. His unwavering and growing faith in God was counted to him as righteousness **(Rom 4: 16-25)**.
+
+## Romans 5
+
+-
