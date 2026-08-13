@@ -18,10 +18,10 @@ permalink: /packet_analysis/throughput/
 
 The 3-way handshake was captured and it had the following TCP Options:
 - **Client Side**:
-![](fullTP1_client3way.png)
+![](throughput_images/fullTP1_client3way.png)
 
 - **Server Side**:
-![](fullTP1_server3way.png)
+![](throughput_images/fullTP1_server3way.png)
 
  - **Observations**:
 	 - The server will be able to send 8-bytes less than that what the client can send.
