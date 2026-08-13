@@ -57,7 +57,7 @@ permalink: /bible_notes/romans/
 - Finally, Paul answers the very important question: "Do we overthrow the law by faith?" No, we uphold it, as in, support it, defend it and maintain it **(Rom 3: 31)**.
 
 
-## Romans 4
+# Romans 4
 
 - "_Abraham believed God, and it was counted for righteousness._" Paul begins this chapter prioritizing faith over works, thus eliminating boasting before God **(Rom 4: 1-8)**.
 
@@ -66,3 +66,11 @@ permalink: /bible_notes/romans/
 - If those who follow the Law are heirs of God's promises, then faith is null, however, the Law reveals what transgressions really are **(Rom 4: 13-15)**.
 
 - Paul end this chapter stating that Abraham is the father of those who have faith in God: both of the circumcised as well as the uncircumcised. His unwavering and growing faith in God was counted to him as righteousness **(Rom 4: 16-25)**.
+
+# Romans 5
+
+- **Rom 5: 1-5**: In continuation with the previous chapter, Paul gives the letter's most profound and often discussed point: salvation by faith in Jesus Christ. This concept gives people a reason to rejoice in the grace of God, even when suffering.
+
+- **Rom 5: 6-11**: Jesus' sacrifice allowed us to get reconciled with God, be undeservedly justified and have the opportunity of being saved by Him.
+
+- **Rom 5: 12-21**: Paul compares Adam's sin and generational condemnation to God's **free gift** of salvation, justification and grace in through Yeshua. Paul provides a bigger picture of Yeshua's positive effects to all humans, than that of Adam's actions.
