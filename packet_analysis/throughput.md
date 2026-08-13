@@ -3,7 +3,7 @@ layout: default
 title: "Throughput Topics"
 permalink: /packet_analysis/throughput/
 ---
-# Full TCP Analysis I
+# Full Throughput Analysis I
 (08/06/2026)
 
 ## Introduction
@@ -18,10 +18,10 @@ permalink: /packet_analysis/throughput/
 
 The 3-way handshake was captured and it had the following TCP Options:
 - **Client Side**:
-![](throughput_images/fullTCP1_client3way.png)
+![](fullTP1_client3way.png)
 
 - **Server Side**:
-![](throughput_images/fullTCP1_server3way.png)
+![](fullTP1_server3way.png)
 
  - **Observations**:
 	 - The server will be able to send 8-bytes less than that what the client can send.
@@ -54,9 +54,9 @@ This stream's data flow consists of a simple HTTP GET request to a Microsoft CDN
 	- This goes on and on: the client sends an ACK back with its available Window Size, which increases as time goes on, and the server sends as much data as it can, thus triggering the `TCP Window Full` alert again and again. Eventually, the time between those alerts increases, which reveals more traffic stability.
 
 
-	![](throughput_images/fullTCP1_WindowsFull.png)
+	![](fullTP1_WindowsFull.png)
 
-	![](throughput_images/fulTCP1_WindowFull2.png)
+	![](fulTP1_WindowFull2.png)
 
 - **ZeroWindow**:
 	- Sent by the client.
@@ -67,24 +67,67 @@ This stream's data flow consists of a simple HTTP GET request to a Microsoft CDN
 		- _TCP Window Full_: Wireshark calculates the following formula `Last Advertised Window = Cumulated Bytes in Flight`. The server then awaits the client's ACK to know what the real advertised window should from then on.
 	- The following Windows Scale graph illustrates how the client's advertised window scale increases at certain points, and then decreases in several other instances. Close to the 7.5 second mark is when the client's window size spikes down to zero several times.
 
-	![](throughput_images/fullTCP1_WindowScaleGraph.png)
+	![](fullTP1_WindowScaleGraph.png)
 
 - **Previous Segment Not Captured / Out-of-Order / Retransmissions**:
 	- There is an eerie relationship between all three of them.
 	- It all starts with a `Previous Segment No Captured` on packet 2559, whose sequence # is 38 full MSS's from the last received sequence #. Thereafter, the server keeps sending packets from that sequence # onward. However, these packets are not tagged as `Previous Segment No Captured` nor `Out-of-Order`.
-	![](throughput_images/fullTCP1_PrevSegnotCap.png)
+	![](fullTP1_PrevSegnotCap.png)
 
 	- This is proven when the client sends a series of `TCP DUP Ack`s thereafter. The SACK blocks start acknowledging the sequence #'s from packets 2559 - 2567.
-	![](throughput_images/fullTCP1_DupAcks.png)
+	![](fullTP1_DupAcks.png)
 
 	- This means packet analysts should be aware of how `Previous Segment No Captured` packets are read, and how the subsequent packets are captured, in context.
 	- Sort of the same symptom happens when a `Retransmission` happens. Packet 2691 starts the `Fast Retransmission` process, after which subsequent successfully captured retransmissions are tagged as such. 
-	![](throughput_images/fullTCP1_FastRetrans.png)
+	![](fullTP1_FastRetrans.png)
 
 	- However, the next retransmission series is tagged as `Out-of-Order` packets. To prove the latter is part of the same retransmission segments as the fast-retransmissions seen earlier, the `Out-of-Order` SACK blocks indicate they are the rightful continuation of them.
-	![](throughput_images/fullTCP1_OOOafterReTrans.png)
+	![](fullTP1_OOOafterReTrans.png)
 
 	- There are other examples of this throughout this trace file. So this is another warning to packet analysts: **always follow SACK block numbers** when analyzing packet loss. Some server retransmissions may be deemed as `Out-of-Order` packets.
+
+## Other TCP Stream Graphs
+
+### TCPTrace / Stevens
+
+- Both graphs show the same incremental server-to-client bytes pattern.
+
+	![549](throughput_images/fullTP1_stevens.png|464)
+
+- There are four big steps in this graph, and all of them have involve the client taking its time to send an HTTP GET request to the server. The `Set/Unset Time Reference` was used, and an example is shown below:
+	- **1st Step**: 1.74 seconds between the server's previous data sent to the next server-side data sent.
+	- **2nd Step**: 0.71 seconds.
+	- **3rd Step**: 3.8 seconds.
+	- **4th Step**: 15.45 seconds to the first FIN packet.
+	![](throughput_images/fullTP1_1stStep.png)
+	
+- There are other mini-steps, since there are more GET requests, but these were the major ones. Some of these GETs cause some minor delays in throughput. The following image illustrates the sorted in-stream delta times of some GET requests:
+	
+	![](throughput_images/fullTP1_sortedGETs.png)
+	
+### Throughput Graph
+
+![](throughput_images/fullTP1_throughput_graph.png)
+
+- The `Throughput` graph shows how the throughput evolved through time, its peak being past the 100Mbps mark.
+
+- This means that when **no user** was interacting with this computer, it was involved with 100Mbps of throughput. For reference, my Internet speed is 250Mbps and this computer almost took half of it.
+
+- Additionally, when compared with the `Stevens` graph, it is clear the throughput follows an _almost_ linear relationship with the increase of sequence numbers. It may follow the `sequence_number = throughput * time + offset`.
+
+- There are sightings of a **Throughput Ramp-Up Rate**, which is analogous to the acceleration, but in Internet speed terms. This is seen when, in the `Stevens` graph, the following occurs:
+	- the sequence number goes up exponentially, which is equivalent to the throughput increasing linearly. 
+	- the sequence numbers climb linearly, hence the constant throughput rate, and the ramp-up rate equating to zero.
+	- the sequence numbers don't increase, thus resulting in the throughput being zero.
+
+
+## Conclusions
+
+- When no one was interacting with this computer, it reached out to Microsoft for some information transfer.
+
+- The information transfer was not smooth because it encountered `ZeroWindow` errors and `Out-of-Order` packets. These prompted multiple `Window Update`, `TCP DUP Ack`s and `Retransmission` packets, respectively, which are signs of an unstable TCP session.
+
+- The client sent multiple GET requests to the server, and it took its time in several of them.
 
 __________________________________________________________________________
 

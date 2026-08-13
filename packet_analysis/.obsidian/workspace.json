@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "03a421f407e5a450",
+            "id": "a76492636e07cc2e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,7 +35,8 @@
               "title": "throughput"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -55,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -197,20 +200,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "2107770e4239e73e",
+  "active": "a76492636e07cc2e",
   "lastOpenFiles": [
-    "nsanalysis.md",
+    "throughput_images/fullTP1_throughput_graph.png",
     "throughput.md",
-    "throughput_images/fullTCP1_WindowsFull.png",
-    "throughput_images/fullTCP1_WindowScaleGraph.png",
+    "throughput_images/fullTP1_1stStep2.png",
     "throughput_images/fullTCP1_stevens.png",
     "throughput_images/fullTCP1_sortedGETs.png",
-    "throughput_images/fullTCP1_server3way.png",
-    "throughput_images/fullTCP1_PrevSegnotCap.png",
-    "throughput_images/fullTCP1_OOOafterReTrans.png",
-    "throughput_images/fullTCP1_FastRetrans.png",
-    "throughput_images/fullTCP1_DupAcks.png",
-    "throughput_images/fullTCP1_client3way.png",
+    "throughput_images/fullTP1_client3way.png",
+    "throughput_images/fullTP1_DupAcks.png",
+    "throughput_images/fullTP1_FastRetrans.png",
+    "throughput_images/fullTP1_OOOafterReTrans.png",
+    "throughput_images/fullTP1_PrevSegnotCap.png",
+    "throughput_images/fullTP1_server3way.png",
+    "tcpanalysis.md",
+    "nsanalysis.md",
     "throughput_images",
     "tcpfindings.md",
     "agent_enabled_images",
