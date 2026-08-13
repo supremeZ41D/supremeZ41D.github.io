@@ -54,9 +54,9 @@ This stream's data flow consists of a simple HTTP GET request to a Microsoft CDN
 	- This goes on and on: the client sends an ACK back with its available Window Size, which increases as time goes on, and the server sends as much data as it can, thus triggering the `TCP Window Full` alert again and again. Eventually, the time between those alerts increases, which reveals more traffic stability.
 
 
-	![](fullTP1_WindowsFull.png)
+	![](throughput_images/fullTP1_WindowsFull.png)
 
-	![](fulTP1_WindowFull2.png)
+	![](throughput_images/fulTP1_WindowFull2.png)
 
 - **ZeroWindow**:
 	- Sent by the client.
@@ -67,22 +67,26 @@ This stream's data flow consists of a simple HTTP GET request to a Microsoft CDN
 		- _TCP Window Full_: Wireshark calculates the following formula `Last Advertised Window = Cumulated Bytes in Flight`. The server then awaits the client's ACK to know what the real advertised window should from then on.
 	- The following Windows Scale graph illustrates how the client's advertised window scale increases at certain points, and then decreases in several other instances. Close to the 7.5 second mark is when the client's window size spikes down to zero several times.
 
-	![](fullTP1_WindowScaleGraph.png)
+	![](throughput_images/fullTP1_WindowScaleGraph.png)
 
 - **Previous Segment Not Captured / Out-of-Order / Retransmissions**:
 	- There is an eerie relationship between all three of them.
 	- It all starts with a `Previous Segment No Captured` on packet 2559, whose sequence # is 38 full MSS's from the last received sequence #. Thereafter, the server keeps sending packets from that sequence # onward. However, these packets are not tagged as `Previous Segment No Captured` nor `Out-of-Order`.
-	![](fullTP1_PrevSegnotCap.png)
+
+	![](throughput_images/fullTP1_PrevSegnotCap.png)
 
 	- This is proven when the client sends a series of `TCP DUP Ack`s thereafter. The SACK blocks start acknowledging the sequence #'s from packets 2559 - 2567.
-	![](fullTP1_DupAcks.png)
+
+	![](throughput_images/fullTP1_DupAcks.png)
 
 	- This means packet analysts should be aware of how `Previous Segment No Captured` packets are read, and how the subsequent packets are captured, in context.
 	- Sort of the same symptom happens when a `Retransmission` happens. Packet 2691 starts the `Fast Retransmission` process, after which subsequent successfully captured retransmissions are tagged as such. 
-	![](fullTP1_FastRetrans.png)
+
+	![](throughput_images/fullTP1_FastRetrans.png)
 
 	- However, the next retransmission series is tagged as `Out-of-Order` packets. To prove the latter is part of the same retransmission segments as the fast-retransmissions seen earlier, the `Out-of-Order` SACK blocks indicate they are the rightful continuation of them.
-	![](fullTP1_OOOafterReTrans.png)
+
+	![](throughput_images/fullTP1_OOOafterReTrans.png)
 
 	- There are other examples of this throughout this trace file. So this is another warning to packet analysts: **always follow SACK block numbers** when analyzing packet loss. Some server retransmissions may be deemed as `Out-of-Order` packets.
 
