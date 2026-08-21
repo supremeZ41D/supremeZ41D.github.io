@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "throughput.md",
+                "file": "tcpanalysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "throughput"
+              "title": "tcpanalysis"
             }
           }
         ],
@@ -200,19 +200,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "a76492636e07cc2e",
+  "active": "08b5521583127cb2",
   "lastOpenFiles": [
-    "throughput_images/fullTP1_throughput_graph.png",
+    "tcp_images/tcpprobe_39completeness.png",
+    "tcp_images/tcpprobe_23complete.png",
+    "tcp_images/tcpprobe_1complete.png",
+    "tcp_images/tcpprobe_tcpcomp_field.png",
     "throughput.md",
+    "throughput_images/fullTP1_throughput_graph.png",
     "throughput_images/fullTP1_1stStep2.png",
     "throughput_images/fullTCP1_stevens.png",
     "throughput_images/fullTCP1_sortedGETs.png",
     "throughput_images/fullTP1_client3way.png",
     "throughput_images/fullTP1_DupAcks.png",
     "throughput_images/fullTP1_FastRetrans.png",
-    "throughput_images/fullTP1_OOOafterReTrans.png",
-    "throughput_images/fullTP1_PrevSegnotCap.png",
-    "throughput_images/fullTP1_server3way.png",
     "tcpanalysis.md",
     "nsanalysis.md",
     "throughput_images",
