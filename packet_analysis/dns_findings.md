@@ -1,5 +1,5 @@
 
-DNS-over-HTTP3
+# DNS-over-HTTP3
 
 ## Introduction
 
