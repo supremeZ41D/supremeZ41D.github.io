@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccna_captures.md",
+                "file": "dns_findings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ccna_captures"
+              "title": "dns_findings"
             }
           }
         ]
@@ -187,9 +187,9 @@
   },
   "active": "2107770e4239e73e",
   "lastOpenFiles": [
+    "ccna_captures.md",
     "dns_findings.md",
     "CCNA Topics in Traffic.md",
-    "ccna_captures.md",
     "DNS Findings.md",
     "ccna_images/cdp_packet_stack.png",
     "ccna_images/cdp_advertised_info.png",
