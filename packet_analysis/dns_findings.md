@@ -77,6 +77,45 @@ The first thing the caught my eye was a possible DNS-over-HTTP3-over-QUIC UDP st
 
 - The A-record query might be encrypted.
 
+# DNS-over-HTTP3
+
+## Introduction
+
+I always wanted inspect packets from a "lonely" Android device, but for that I needed an device in the middle of the Android and the Internet. Fortunately, I got a hold of such a device and I immediately went to action.
+
+The first thing the caught my eye was a possible DNS-over-HTTP3-over-QUIC UDP stream. The following are some of the technical specs from the capture:
+- _File_: DoQ_Android.pcapng
+- _Client_: MushaisaPhone
+- _Destination_: 8.8.8.8
+- _Background_:
+	- The _Lonely Android_.
+
+## QUIC Handshake
+
+- When the destination IP is 8.8.8.8, and it is the QUIC protocol, it might have to do with DNS.
+
+	![](dns_images/doq_src_dst.png)
+
+- A curious thing is, there is no _server name_ field in the negotiation parameters. This means the connection request was sent to the real 8.8.8.8 IP address, not to _dns.google_.
+
+- The first 2 packets correspond to the _Client Hello_ and _Server Hello_, respectively (this might indicate some _0-RTT behavior_). This is a stark change from the TCP-based TLS negotiation, which usually takes a full 3-way handshake for the client to send its _Hello_.
+
+	![](dns_images/doq_clientserver_hello.png)
+
+- The handshake uses TLS1.3. Additionally, the packet lengths were 1242 bytes.
+
+- The A-record being queried might be encrypted because it is nowhere to be seen.
+
+-  Unfortunately, without any further SNI, A record domain, or any other field that might help us verify that this is indeed DN-over H3, the rest of the analysis pivots to just reading QUIC traffic.
+
+## Conclusions
+
+- When there is QUIC traffic to 8.8.8.8, it is most likely DNS-over-HTTP3.
+
+- This traffic does not have an SNI.
+
+- The A-record query might be encrypted.
+
 --------------------------------------------------------------------------
 
 # DNS HTTPS Record
