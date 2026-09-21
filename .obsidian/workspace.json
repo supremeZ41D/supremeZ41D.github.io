@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "bible_notes/obidiah.md",
+                "file": "packet_analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "obidiah"
+              "title": "packet_analysis"
             }
           }
         ],
@@ -70,7 +70,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -214,13 +216,13 @@
   },
   "active": "3e73481a77d1f8fb",
   "lastOpenFiles": [
+    "bible_notes/obidiah.md",
     "README.md",
     "about.md",
     "packet_analysis/nsanalysis.md",
     "packet_analysis/tcpanalysis.md",
     "packet_analysis/throughput.md",
     "bible_notes.md",
-    "bible_notes/obidiah.md",
     "bible/obidiah.md",
     "bible_notes/romans.md",
     "packet_analysis.md",
