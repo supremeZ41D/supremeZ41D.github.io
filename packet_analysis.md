@@ -10,4 +10,5 @@ Here you will find a list of pages showcasing some notes on my own packet analys
 - [Netskope Traffic Analysis](/packet_analysis/nsanalysis/)
 - [Throughput Analysis](/packet_analysis/throughput/)
 - [General TCP Findings](/packet_analysis/tcpanalysis)
-- 
+- [DNS Findings](/packet_analysis/dns_findings)
+- [CCNA Captures](/pakcet_analysis/ccna_captures)
