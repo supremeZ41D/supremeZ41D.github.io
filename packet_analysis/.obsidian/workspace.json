@@ -187,6 +187,7 @@
   },
   "active": "08b5521583127cb2",
   "lastOpenFiles": [
+    "ccna_images/ipv6_allnodesroutersmulti.png",
     "ccna_images/ipv6_solicitednodemulti.png",
     "ccna_images/ipv6_multicast.png",
     "ccna_captures.md",
@@ -203,7 +204,6 @@
     "ccna_images",
     "tcpanalysis.md",
     "dns_images/doq_src_dst.png",
-    "dns_images/doq_clientserver_hello.png",
     "dns_images",
     "throughput.md",
     "nsanalysis.md",
