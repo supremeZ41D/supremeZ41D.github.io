@@ -38,6 +38,8 @@ The first thing the caught my eye was a possible DNS-over-HTTP3-over-QUIC UDP st
 
 - The A-record query might be encrypted.
 
+--------------------------------------------------------------------------
+
 # DNS-over-HTTP3
 
 ## Introduction

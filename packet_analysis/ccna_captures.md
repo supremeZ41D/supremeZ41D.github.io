@@ -1,4 +1,50 @@
 
+# IPv6 Findings
+
+Keeping on with some CCNA findings, I thought of looking for the different kinds of IPv6 addresses. I will turn again toward  [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/) for this purpose.
+
+_Remember_, an IPv6 address is 128 bits long.
+
+## Introduction
+
+- _File_: IPV6_Captures_UltimatePCAP.pcapng
+- _Context_: Studying for the CCNA's IPv6 module
+
+## Findings
+
+## General IPv6
+
+- _Filter_: `ipv6`
+- _Packets_: 21118 (100%)
+- _Protocols_:
+	- The normal ones like TCP, UDP, DNS, Echo, RDP, among others.
+	- Some rare ones like Discard Protocol, Daytime Protocol, Character Generator Protocol, among others.
+
+### Global Unicast IPv6
+
+- _Filter_: `ipv6.addr eq 2000::/3`
+- _Packets_: 17238 (81.6%)
+- _Description_: These are internally and externally routable IPv6 addresses.
+
+	![](ccna_images/ipv6_global_unicast.png)
+
+### Multicast IPv6
+
+- _Filter_: `ipv6.addr eq ff::/8`
+- _Packets_: 39 (0.2%)
+- _Description_:
+	- The following list of "endpoints" reflect the **Solicited Node Multicast**, as seen with the prefixed `ff02::1:ff` addresses.
+		- Judging by some of the source MAC addresses, the Solicited Node Multicast has the same last 6 hexadecimal as those seen in the MAC address. Meaning, this might be an **EUI-64** procedure.
+		- The majority of these are Neighbor Solicitations, which are the IPv6 version of ARP packets. The source executing a **Duplicate Address Detection (DAD)** to see if another device has the same EUI-64 generated IPv6 address.
+
+	![362](ipv6_multicast.png|312)
+
+	- The `ff02::16` Multicast address, which is used from endpoints to L3 devices, to let them know if the source wants to be a part of a multicast group, who they want to listen to and who not to listen to. 
+
+
+--------------------------------------------------------------------------
+
+
 # CDP and LLDP Findings
 
 I am currently re-studying the Cisco CCNA, and when learning about CDP and LLDP, a lightbulb lit up in my head... what would these two look in Wireshark? 
