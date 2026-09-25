@@ -34,10 +34,12 @@ _Remember_, an IPv6 address is 128 bits long.
 - _Packets_: 39 (0.2%)
 - _Description_:
 	- The following list of "endpoints" reflect the **Solicited Node Multicast**, as seen with the prefixed `ff02::1:ff` addresses.
-		- Judging by some of the source MAC addresses, the Solicited Node Multicast has the same last 6 hexadecimal as those seen in the MAC address. Meaning, this might be an **EUI-64** procedure.
-		- The majority of these are Neighbor Solicitations, which are the IPv6 version of ARP packets. The source executing a **Duplicate Address Detection (DAD)** to see if another device has the same EUI-64 generated IPv6 address.
+		- Judging by some of the source MAC addresses, the Solicited Node Multicast has the same last 6 hexadecimal as those seen in the MAC address. 
 
-	![362](ipv6_multicast.png|312)
+		![[ipv6_multicast.png|311]]
+		- The majority of these are Neighbor Solicitations, which are the IPv6 version of ARP packets. The source executing a **Duplicate Address Detection (DAD)** to see if another device that has the same **Link-Local Address** in the `fe80::/10` range, ending in the same last 6 hex values.
+
+		![](ipv6_solicitednodemulti.png)
 
 	- The `ff02::16` Multicast address, which is used from endpoints to L3 devices, to let them know if the source wants to be a part of a multicast group, who they want to listen to and who not to listen to. 
 
