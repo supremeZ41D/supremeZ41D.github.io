@@ -12,7 +12,7 @@ _Remember_, an IPv6 address is 128 bits long.
 
 ## Findings
 
-## General IPv6
+### General IPv6
 
 - _Filter_: `ipv6`
 - _Packets_: 21118 (100%)
@@ -46,6 +46,46 @@ _Remember_, an IPv6 address is 128 bits long.
 
 		![](ccna_images/ipv6_allnodesroutersmulti.png)
 
+
+### Link-Local IPv6 Address
+
+- _Filter_: `ipv6.addr eq fe80::/10`
+- _Packets_: 3999 (18.9%)
+- _Description_:
+	- IPv6's APIPA version, in some cases.
+	- There are basically two types of _Link-Lokal IPV6 addresses_: the `fe80::1` and the `fe80::<EUI-64>`.
+	- Aside from that, they are involved with the following Multicast IPv6's: `ff02::1` (Neighbor / Router Advertisements) , `ff02::16` (Multicast Listener), `ff02::5` (OSPF, including `ff02::6`) and among others. 
+
+### Unique Local IPv6
+
+- _Filter_: `ipv6.addr in {fc00::/7, fd00::/7}`
+- _Packets_: 3 (approx. 0.0%)
+- _Description_:
+	- These addresses are only routable within the same network; not routable to the internet. This is the IPv6 version of "private addresses".
+	- Only NTP traffic in this case.
+
+		![](ccna_images/ipv6_uniquelocal.png)
+
+### IPv6 Loopback Address
+
+- _Filter_: `ipv6.addr eq ::1`
+- _Packets_: 0 (0%)
+
+### IPv6 Unspecified Address
+
+- _Filter_: `ipv6.addr eq ::`
+- _Packets_: 39 (0.2%)
+- _Description_:
+	- ICMPv6 packets exclusively.
+	- Multicast Listener Report Messages and Neighbor Solicitations, are among the messages sent.
+
+		![](ccna_images/ipv6_unspecifiedaddress.png)
+
+## Conclusions
+
+- IPv6 is used in today's networks.
+
+- The Global Unicast and Link-Local addresses are the most numerous. This is expected, given each one's use cases, where the former is for internal and external communication, while the applied as APIPA or as a self-generated IP.
 
 --------------------------------------------------------------------------
 
