@@ -1,4 +1,86 @@
 
+
+# SLAAC Sighting
+
+Since I am still fond of finding IPv6 addresses, I figure I might as well continue analyzing them a bit longer. 
+
+After learning more about how devices get assigned an IPv6 address, I sought out to find a SLAAC process. This was not easy since Wireshark has no way of identifying a EUI-64 address. Also, Wireshark does not support using using specific byte information in search filter variables. I mean, I was trying to use something like `ipv6.addr[14:2] eq ${eth.addr[4:2]}`, in order to find bytes in the IPv6 address similar to bytes in the MAC address, but this was not possible.
+
+This means, I had to understand the SLAAC process and search by eye!
+
+Again, this analysis is done with the help of   [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/).
+
+## Introduction
+
+- _File_: IPV6_Captures_UltimatePCAP.pcapng
+- _Context_: Studying for the CCNA's IPv6 module
+
+## Findings
+
+### Client Neighbor Solicitation without Response
+
+- **Packet # 3**: This all starts with a _Neighbor Solicitation_ from a MAC address _00:21:6a:2d:3b:8e_ (Device A) to the multicast address _ff02::1:ff2d:3d8e_, which, according to theory, is the Solicited Node Multicast address for that device.
+
+	![](ccna_images/slaac_neighsolicitation.png)
+
+- The source IPv6 address is _::_.
+
+- The _Target Address_ is _fe80::221:6aff:fe2d:3b8e_, meaning Device A is trying to find another device with that _Link-local_ address. This signals that Device A already assigned to itself _fe80::221:6aff:fe2d:3b8e_.
+
+- No answer was found.
+
+### Unsolicited Router Neighbor Advertisement
+
+- **Packet # 4**: A device (_d4:21:22:76:5b:78_, Router A) proactively sends a _Neighbor Advertisement_ stating it is a router and that all available nodes should update their cache with this MAC address (flags _R and O = 1_).
+
+	![](ccna_images/slaac_unsol_neighadvertisement.png)
+
+
+### Client Router Solicitation
+
+- **Packets # 6, 7**:  Device A sends two _Router Solicitations_ (to _ff02::2_). 
+
+	![](ccna_images/slaac_routersolicitation.png)
+
+- **Source IPv6**: Device A's Link'Local IP of _fe80::221:6aff:fe2d:3b8e_.
+
+- Inside the ICMPv6 options of one of the _Router Solicitation_ packets, there is a _Link-Layer Address_ pointing at Device A's MAC address: _00:21:6a:2d:3b:8e_.
+
+### Router Neighbor Solicitation and Client Response
+
+- **Packet # 8**: After Device A's _Router Solicitation_, Router A (using the source address _fe80::1_) sends a _Neighbor Solicitation_, specifically asking **who** the IPv6 _fe80::221:6aff:fe2d:3b8e_ address (Device A).
+
+	![](ccna_images/slaac_router_neighsolicitation.png)
+
+- **Packet # 9**: Device A responds back to the solicitation (the _SOL_ flag), stating **it** has that Link-Local address to Router A. 
+
+	![](ccna_images/slaac_dev_neighadvertisement.png)
+
+- Keep an eye on the _Stream Index_ (Wireshark field) field, which in this case, for both solicitation and advertisement, is 5. The _Stream Index_ for the previous packets were different.
+### Router Advertisement
+
+- **Packet # 10**: Router A sends the Prefix (_2003:50:aa10:4243::/64_), MTU (1492), and a flag stating it _should_ be the default router (with some timers).
+
+	![](ccna_images/slaac_routeradvert.png)
+
+- For curioity reasons, here are some definitions of those timers:
+	- **Router Lifetime**: the time Router A is a valid _default gateway_.
+	- **Reachable Time**: how long a neighbor should be considered as _reachable_.
+	- **Retrans Time**: the time allowed between _Neighbor Solicitations_ from Device A.
+
+### Last Neighbor Solicitation
+
+- **Packet # 16**: Finally, a _Neighbor Solicitation_ for _2003:50:aa10:4243:221:6aff:fe2d:3b8e_, which is exactly the _Router Advertisement's_ prefix and Device A's EUI-64.
+
+![](ccna_images/slaac_neighborsol_withprefix.png)
+
+## Conclusions
+
+- Following a SLAAC conversation is not easy, since Wireshark does not provide additional help to link both solicitations and advertisements. A EUI-64 filter might come in handy in Wireshark ease the search time.
+
+- The IPv6 multicast addresses make it a challenge sometimes to know which advertisements correspond with which solicitations. This means a SLAAC process must be followed from the foirst solicitation.
+--------------------------------------------------------------------------
+
 # IPv6 Findings
 
 Keeping on with some CCNA findings, I thought of looking for the different kinds of IPv6 addresses. I will turn again toward  [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/) for this purpose.

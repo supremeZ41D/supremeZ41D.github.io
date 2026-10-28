@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dns_findings.md",
+                "file": "ccna_captures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dns_findings"
+              "title": "ccna_captures"
             }
           }
         ]
@@ -187,20 +187,20 @@
   },
   "active": "2107770e4239e73e",
   "lastOpenFiles": [
+    "ccna_images/slaac_neighborsol_withprefix.png",
     "ccna_captures.md",
+    "ccna_images/slaac_routeradvert.png",
+    "ccna_images/slaac_dev_neighadvertisement.png",
+    "ccna_images/slaac_router_neighsolicitation.png",
+    "ccna_images/slaac_unsol_neighadvertisement.png",
+    "ccna_images/slaac_routersolicitation.png",
+    "ccna_images/slaac_neighsolicitation.png",
+    "dns_findings.md",
     "ccna_images/ipv6_unspecifiedaddress.png",
     "ccna_images/ipv6_uniquelocal.png",
     "ccna_images/ipv6_allnodesroutersmulti.png",
-    "ccna_images/ipv6_solicitednodemulti.png",
-    "ccna_images/ipv6_multicast.png",
-    "dns_findings.md",
-    "ccna_images/ipv6_global_unicast.png",
     "CCNA Topics in Traffic.md",
     "DNS Findings.md",
-    "ccna_images/cdp_packet_stack.png",
-    "ccna_images/cdp_advertised_info.png",
-    "ccna_images/lldp_packet_stack.png",
-    "ccna_images/lldp_ipv6_mgmt.png",
     "ccna_images",
     "tcpanalysis.md",
     "dns_images",
