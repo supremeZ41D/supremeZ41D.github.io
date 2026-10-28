@@ -78,7 +78,9 @@ Again, this analysis is done with the help of   [Johannes Weber's Ultimate PCAP]
 
 - Following a SLAAC conversation is not easy, since Wireshark does not provide additional help to link both solicitations and advertisements. A EUI-64 filter might come in handy in Wireshark ease the search time.
 
-- The IPv6 multicast addresses make it a challenge sometimes to know which advertisements correspond with which solicitations. This means a SLAAC process must be followed from the foirst solicitation.
+- The IPv6 multicast addresses make it a challenge sometimes to know which advertisements correspond with which solicitations. This means a SLAAC process must be followed from the first solicitation.
+
+
 --------------------------------------------------------------------------
 
 # IPv6 Findings
