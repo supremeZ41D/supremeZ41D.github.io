@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: "CCNA Captures"
+permalink: /packet_analysis/ccna_captures/
+---
 
 # SLAAC Sighting
 
