@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ccna_captures.md",
+                "file": "dns_findings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ccna_captures"
+              "title": "dns_findings"
             }
           }
         ]
@@ -187,25 +187,25 @@
   },
   "active": "2107770e4239e73e",
   "lastOpenFiles": [
-    "ccna_images/slaac_neighborsol_withprefix.png",
+    "nsanalysis.md",
+    "dns_findings.md",
     "ccna_captures.md",
+    "throughput.md",
+    "tcpanalysis.md",
+    "ccna_images/slaac_neighborsol_withprefix.png",
     "ccna_images/slaac_routeradvert.png",
     "ccna_images/slaac_dev_neighadvertisement.png",
     "ccna_images/slaac_router_neighsolicitation.png",
     "ccna_images/slaac_unsol_neighadvertisement.png",
     "ccna_images/slaac_routersolicitation.png",
     "ccna_images/slaac_neighsolicitation.png",
-    "dns_findings.md",
     "ccna_images/ipv6_unspecifiedaddress.png",
     "ccna_images/ipv6_uniquelocal.png",
     "ccna_images/ipv6_allnodesroutersmulti.png",
     "CCNA Topics in Traffic.md",
     "DNS Findings.md",
     "ccna_images",
-    "tcpanalysis.md",
     "dns_images",
-    "throughput.md",
-    "nsanalysis.md",
     "throughput_images",
     "tcpfindings.md",
     "agent_enabled_images",
