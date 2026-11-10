@@ -1,3 +1,9 @@
+---
+layout: default
+title: "DNS Findings"
+permalink: /packet_analysis/dns_findings/
+---
+
 
 # DNS-over-HTTP3
 
