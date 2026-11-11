@@ -3,6 +3,77 @@ layout: default
 title: "CCNA Captures"
 permalink: /packet_analysis/ccna_captures/
 ---
+# Spanning-Tree Protocol
+
+Keeping the same energy here, with the same source materials (the CCNA and [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/)), I was curious to see STP traffic. To my surprise, if done methodically and with patience, an STP topology can be infered just by analyzing STP packets.
+
+## Introduction
+
+- _File_: STP_UltimatePCAP.pcapng
+- _Context_: Studying for the CCNA's STP module.
+
+## Findings
+
+- For the purposes of this analysis, the scope will be Per-VLAN Spanning Tree traffic. For starters, the _Conversations_ section was investigated and only two streams were chosen: 0 and 1.
+
+### Stream 0
+
+- _Source MAC_: _00:0a:8a:a1:5a:9a_ (Port 5a9a, from now on).
+
+- _Destination MAC_: _01:00:0c:cc:cc:cd_ (PVST+), meaning, the Port 5a9a is sending a BPDU to everyone listening at this destination MAC (multicast).
+
+- There are two Root Bridges identified: _00:0a:8a:a1:5a:80_ (Root Bridge 5a80) and _00:21:1b:ae:31:80_ (Root Bridge 3180).
+
+#### Root Bridge 5a80
+
+- Focusing on _Root Bridge 5a80_, it is seen that the Root Bridge and Bridge IDs are equal, the latter of which corresponds to the switch that originated Stream ID 0. After doing some research, it was found that these IDs' MAC addresses correspond to the chassis MAC addresses.
+
+- If both the Root and Bridge IDs are equal, this means that the source device is considering **itself** as the Root Bridge!
+
+	![](ccna_images/stp_str0_root5a80.png|518)
+
+- This also means Port 5a9a should be a _Designated_ port.
+
+![](ccna_images/stp_str0_port5a9a_designated.png)
+
+- Finally, since it is PVST+, the VLANs, this switch is a Root Bridge of, are the 1, 2, 3, and 121. 
+
+#### Root Bridge 3180
+
+- Focusing on _Root Bridge 3180_, it is seen that Port 5a9a is a _Root Port_ of it.
+
+	![](stp_str0_port5a9a_rp.png)
+
+- The Root Bridge and Bridge IDs are different, meaning Root Bridge 3180 is the root bridge for VLANs 10, 20, 30, 40, 50, 60, 70, 80, and 90.
+
+	![](ccna_images/stp_str0_root3180_rbIDs.png)
+
+
+### Stream 1
+
+- _Source MAC_: _00:21:1b:ae:31:99_ (Port 3199).
+
+- _Destination MAC_: _01:00:0c:cc:cc:cd_ (PVST+), meaning, the Port 3199 is sending a BPDU to everyone listening at this destination MAC (multicast).
+
+- Easily enough for this stream, the Root Bridge and Bridge IDs are equal.
+
+	![](ccna_images/stp_str1_rbIds_equal.png)
+
+- Port 3199 is seen as _Designated_ for VLANs 10, 20, 30, 40, 50, 60, 70, 80, and 90. Port 3199 is not tagged as being the Root Port of any other STP topology.
+
+### Curiosities
+
+- A Bridge Identifier is made up of the _Bridge Priority_, _Bridge System ID Extension_ (which is equal to the associated VLAN), and _Bridge System ID_ (which is the chassis MAC address).
+
+	![](ccna_images/stp_bridgeid.png)
+
+- _Root Path Cost_: The interface's cost toward the Root Bridge. For Designated ports in a Root Bridge, the value should be 0. For any other port of any other non-Root Bridges, this cost changes. Below is an example of a _Root Path Cost_ equal to 4, which according to the _Short Path Cost Method_, it should correspond to a 1GB interface!
+
+	![](ccna_images/stp_rootpathcost.png)
+
+
+
+__________________________________________________________________________
 
 # SLAAC Sighting
 
@@ -12,7 +83,7 @@ After learning more about how devices get assigned an IPv6 address, I sought out
 
 This means, I had to understand the SLAAC process and search by eye!
 
-Again, this analysis is done with the help of   [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/).
+Again, this analysis is done with the help of  [Johannes Weber's Ultimate PCAP](https://weberblog.net/the-ultimate-pcap/).
 
 ## Introduction
 
