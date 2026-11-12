@@ -30,7 +30,7 @@ Keeping the same energy here, with the same source materials (the CCNA and [Joha
 
 - If both the Root and Bridge IDs are equal, this means that the source device is considering **itself** as the Root Bridge!
 
-	![](ccna_images/stp_str0_root5a80.png|518)
+	![](ccna_images/stp_str0_root5a80.png)
 
 - This also means Port 5a9a should be a _Designated_ port.
 
@@ -42,7 +42,7 @@ Keeping the same energy here, with the same source materials (the CCNA and [Joha
 
 - Focusing on _Root Bridge 3180_, it is seen that Port 5a9a is a _Root Port_ of it.
 
-	![](stp_str0_port5a9a_rp.png)
+	![](ccna_images/stp_str0_port5a9a_rp.png)
 
 - The Root Bridge and Bridge IDs are different, meaning Root Bridge 3180 is the root bridge for VLANs 10, 20, 30, 40, 50, 60, 70, 80, and 90.
 
@@ -61,7 +61,7 @@ Keeping the same energy here, with the same source materials (the CCNA and [Joha
 
 - Port 3199 is seen as _Designated_ for VLANs 10, 20, 30, 40, 50, 60, 70, 80, and 90. Port 3199 is not tagged as being the Root Port of any other STP topology.
 
-### Curiosities
+### Final Curiosities
 
 - A Bridge Identifier is made up of the _Bridge Priority_, _Bridge System ID Extension_ (which is equal to the associated VLAN), and _Bridge System ID_ (which is the chassis MAC address).
 
